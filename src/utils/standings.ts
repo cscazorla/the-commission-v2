@@ -2,6 +2,10 @@ import { Match, PlayerStats, TeamStats } from '../types/league'
 import { Player } from '../types/players'
 import { Team } from '../types/teams'
 
+const hasMatchBeenPlayed = (matchDate: string) => {
+  return new Date(matchDate) < new Date()
+}
+
 export function calculateTeamStats(matches: Match[]): TeamStats[] {
   // Initialize stats for all teams
   const stats = new Map<Team, TeamStats>()
@@ -21,44 +25,46 @@ export function calculateTeamStats(matches: Match[]): TeamStats[] {
     })
   })
 
-  // Process matches
-  matches.forEach((match) => {
-    const homeStats = stats.get(match.homeTeamId)!
-    const awayStats = stats.get(match.awayTeamId)!
+  // Process only played matches
+  matches
+    .filter(match => hasMatchBeenPlayed(match.date))
+    .forEach((match) => {
+      const homeStats = stats.get(match.homeTeamId)!
+      const awayStats = stats.get(match.awayTeamId)!
 
-    const homeGoals = match.homeGoals.length
-    const awayGoals = match.awayGoals.length
+      const homeGoals = match.homeGoals.length
+      const awayGoals = match.awayGoals.length
 
-    // Update played games
-    homeStats.played += 1
-    awayStats.played += 1
+      // Update played games
+      homeStats.played += 1
+      awayStats.played += 1
 
-    // Update goals
-    homeStats.goalsFor += homeGoals
-    homeStats.goalsAgainst += awayGoals
-    awayStats.goalsFor += awayGoals
-    awayStats.goalsAgainst += homeGoals
+      // Update goals
+      homeStats.goalsFor += homeGoals
+      homeStats.goalsAgainst += awayGoals
+      awayStats.goalsFor += awayGoals
+      awayStats.goalsAgainst += homeGoals
 
-    // Update wins/draws/losses and points
-    if (homeGoals > awayGoals) {
-      homeStats.won += 1
-      awayStats.lost += 1
-      homeStats.points += 3
-    } else if (awayGoals > homeGoals) {
-      awayStats.won += 1
-      homeStats.lost += 1
-      awayStats.points += 3
-    } else {
-      homeStats.drawn += 1
-      awayStats.drawn += 1
-      homeStats.points += 1
-      awayStats.points += 1
-    }
+      // Update wins/draws/losses and points
+      if (homeGoals > awayGoals) {
+        homeStats.won += 1
+        awayStats.lost += 1
+        homeStats.points += 3
+      } else if (awayGoals > homeGoals) {
+        awayStats.won += 1
+        homeStats.lost += 1
+        awayStats.points += 3
+      } else {
+        homeStats.drawn += 1
+        awayStats.drawn += 1
+        homeStats.points += 1
+        awayStats.points += 1
+      }
 
-    // Update goal differences
-    homeStats.goalDifference = homeStats.goalsFor - homeStats.goalsAgainst
-    awayStats.goalDifference = awayStats.goalsFor - awayStats.goalsAgainst
-  })
+      // Update goal differences
+      homeStats.goalDifference = homeStats.goalsFor - homeStats.goalsAgainst
+      awayStats.goalDifference = awayStats.goalsFor - awayStats.goalsAgainst
+    })
 
   return Array.from(stats.values()).sort(sortTeams)
 }
