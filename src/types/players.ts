@@ -1,5 +1,5 @@
 export enum Player {
-  BORJA_PARIAS = "Borja Parías",
+  BORJA_PARIAS = "Borja Parias",
   CARLOS_PAJARO = "Carlos Pajaro",
   JORGE_PASTOR = "Jorge Pastor",
   RAFA_LOPEZ = "Rafael López de Lemus",
@@ -16,7 +16,7 @@ export enum Player {
   RAFA_TRUJILLO = "Rafael Trujillo",
   JAIME_RUFO = "Jaime Rufo",
   MIGUEL_LAGUILLO = "Miguel Laguillo",
-  ANGEL_ALVAREZ = "Ángel Alvarez",
+  ANGEL_ALVAREZ = "Ángel Álvarez",
   THOMAS_LAWRENCE = "Thomas Lawrence",
   ALBERTO_MARCA = "Alberto Marca",
   ANGEL_AGUADO = "Ángel Aguado",
