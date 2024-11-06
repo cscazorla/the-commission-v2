@@ -3,7 +3,7 @@ export enum Player {
   CARLOS_PAJARO = "Carlos Pajaro",
   JORGE_PASTOR = "Jorge Pastor",
   RAFA_LOPEZ = "Rafael López de Lemus",
-  JOSE_CIA = "Jose Cíaa",
+  JOSE_CIA = "Jose Cía",
   BORJA_CALZADILLA = "Borja Calzadilla",
   POLI = "Poli",
   EZEQUIEL = "Ezequiel",
