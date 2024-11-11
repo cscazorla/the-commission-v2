@@ -110,8 +110,17 @@ export const MATCHES: Match[] = [
     time: '21:00',
     homeTeamId: Team.GREEN,
     awayTeamId: Team.WHITE,
-    homeGoals: [],
-    awayGoals: [],
+    homeGoals: [
+      { scorer: Player.MIGUEL_LAGUILLO },
+      { scorer: Player.MIGUEL_LAGUILLO },
+    ],
+    awayGoals: [
+      { scorer: Player.JORGE_PASTOR },
+      { scorer: Player.ALBERTO_MARCA },
+      { scorer: Player.ALFONSO_OLLERO },
+      { scorer: Player.ANGEL_AGUADO },
+      { scorer: Player.ANGEL_AGUADO },
+    ],
   },
   {
     id: 'match8',
@@ -120,8 +129,15 @@ export const MATCHES: Match[] = [
     time: '22:00',
     homeTeamId: Team.RED,
     awayTeamId: Team.BLUE,
-    homeGoals: [],
-    awayGoals: [],
+    homeGoals: [
+      { scorer: Player.RAFA_LOPEZ },
+      { scorer: Player.DANI_NAVARRO },
+      { scorer: Player.CARLOS_PAJARO },
+    ],
+    awayGoals: [
+      { scorer: Player.JOSE_LUIS_FERNANDEZ },
+      { scorer: Player.CARLOS_SANCHEZ },
+    ],
   },
   {
     id: 'match9',

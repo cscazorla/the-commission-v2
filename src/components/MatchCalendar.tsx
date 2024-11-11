@@ -61,7 +61,10 @@ export default function MatchCalendar() {
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mb: 2 }}>
               {dateMatches.map((match) => (
-                <Card key={match.id}>
+                <Card
+                  key={match.id}
+                  sx={{ bgcolor: '#fafafa' }}
+                >
                   <CardContent>
                     <Typography variant="body2" color="text.secondary" sx={{ mb: 1, textAlign: 'center' }}>
                       {match.time}h
@@ -87,7 +90,6 @@ export default function MatchCalendar() {
                         sx={{
                           px: 3,
                           py: 1,
-                          bgcolor: 'action.hover',
                           borderRadius: 1,
                           mx: 4,
                         }}
