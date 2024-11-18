@@ -166,8 +166,20 @@ export const MATCHES: Match[] = [
     time: '22:00',
     homeTeamId: Team.RED,
     awayTeamId: Team.GREEN,
-    homeGoals: [],
-    awayGoals: [],
+    homeGoals: [
+      { scorer: Player.PEDRO_RODRIGUEZ },
+      { scorer: Player.PEDRO_RODRIGUEZ },
+      { scorer: Player.CARLOS_PAJARO },
+      { scorer: Player.EZEQUIEL },
+      { scorer: Player.EZEQUIEL },
+      { scorer: Player.DANI_NAVARRO },
+    ],
+    awayGoals: [
+      { scorer: Player.BORJA_CALZADILLA },
+      { scorer: Player.BORJA_CALZADILLA },
+      { scorer: Player.DANI_MARTIN },
+      { scorer: Player.DANI_MARTIN },
+    ],
   },
   {
     id: 'match11',
