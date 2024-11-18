@@ -146,8 +146,18 @@ export const MATCHES: Match[] = [
     time: '21:00',
     homeTeamId: Team.BLUE,
     awayTeamId: Team.WHITE,
-    homeGoals: [],
-    awayGoals: [],
+    homeGoals: [
+      { scorer: Player.JOSE_LUIS_FERNANDEZ },
+      { scorer: Player.JOSE_LUIS_FERNANDEZ },
+      { scorer: Player.JAVI_CIA },
+      { scorer: Player.JAVI_CIA },
+      { scorer: Player.CARLOS_SANCHEZ },
+    ],
+    awayGoals: [
+      { scorer: Player.JORGE_PASTOR },
+      { scorer: Player.JORGE_PASTOR },
+      { scorer: Player.BORJA_PARIAS },
+    ],
   },
   {
     id: 'match10',
