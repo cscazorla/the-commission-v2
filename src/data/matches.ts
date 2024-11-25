@@ -196,11 +196,18 @@ export const MATCHES: Match[] = [
     matchDay: 6,
     date: '2024-11-25',
     time: '21:00',
-    played: false,
+    played: true,
     homeTeamId: Team.BLUE,
     awayTeamId: Team.GREEN,
-    homeGoals: [],
-    awayGoals: [],
+    homeGoals: [
+      { scorer: Player.JOSE_LUIS_FERNANDEZ },
+      { scorer: Player.JOSE_LUIS_FERNANDEZ },
+      { scorer: Player.LUIS_CABEZA },
+    ],
+    awayGoals: [
+      { scorer: Player.POLI },
+      { scorer: Player.JOSE_ANTONIO_MERA },
+    ],
   },
   {
     id: 'match12',
