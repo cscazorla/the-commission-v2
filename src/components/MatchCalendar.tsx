@@ -29,10 +29,6 @@ function formatGoals(goals: Goal[]): string {
     .join(', ')
 }
 
-const hasMatchBeenPlayed = (matchDate: string) => {
-  return new Date(matchDate) < new Date()
-}
-
 export default function MatchCalendar() {
   const matches = MATCHES
   const matchesByDate = matches.reduce((acc, match) => {
@@ -95,7 +91,7 @@ export default function MatchCalendar() {
                         }}
                       >
                         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
-                          {hasMatchBeenPlayed(match.date)
+                          {match.played
                             ? `${match.homeGoals.length} - ${match.awayGoals.length}`
                             : 'vs'
                           }

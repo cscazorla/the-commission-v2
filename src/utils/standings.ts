@@ -2,9 +2,7 @@ import { Match, PlayerStats, TeamStats } from '../types/league'
 import { Player } from '../types/players'
 import { Team } from '../types/teams'
 
-const hasMatchBeenPlayed = (matchDate: string) => {
-  return new Date(matchDate) < new Date()
-}
+
 
 export function calculateTeamStats(matches: Match[]): TeamStats[] {
   // Initialize stats for all teams
@@ -27,7 +25,7 @@ export function calculateTeamStats(matches: Match[]): TeamStats[] {
 
   // Process only played matches
   matches
-    .filter(match => hasMatchBeenPlayed(match.date))
+    .filter(match => match.played)
     .forEach((match) => {
       const homeStats = stats.get(match.homeTeamId)!
       const awayStats = stats.get(match.awayTeamId)!

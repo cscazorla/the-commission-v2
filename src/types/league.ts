@@ -11,6 +11,7 @@ export interface Match {
   matchDay: number
   date: string
   time: string
+  played: boolean
   homeTeamId: Team
   awayTeamId: Team
   homeGoals: Goal[]

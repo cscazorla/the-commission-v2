@@ -8,6 +8,7 @@ export const MATCHES: Match[] = [
     matchDay: 1,
     date: '2024-10-07',
     time: '21:00',
+    played: true,
     homeTeamId: Team.RED,
     awayTeamId: Team.BLUE,
     homeGoals: [
@@ -27,6 +28,7 @@ export const MATCHES: Match[] = [
     matchDay: 1,
     date: '2024-10-07',
     time: '22:00',
+    played: true,
     homeTeamId: Team.WHITE,
     awayTeamId: Team.GREEN,
     homeGoals: [
@@ -45,6 +47,7 @@ export const MATCHES: Match[] = [
     matchDay: 2,
     date: '2024-10-14',
     time: '21:00',
+    played: true,
     homeTeamId: Team.GREEN,
     awayTeamId: Team.RED,
     homeGoals: [
@@ -64,6 +67,7 @@ export const MATCHES: Match[] = [
     matchDay: 2,
     date: '2024-10-14',
     time: '22:00',
+    played: true,
     homeTeamId: Team.BLUE,
     awayTeamId: Team.WHITE,
     homeGoals: [{ scorer: Player.ALVARO_CORNEJO }],
@@ -78,6 +82,7 @@ export const MATCHES: Match[] = [
     matchDay: 3,
     date: '2024-11-04',
     time: '21:00',
+    played: true,
     homeTeamId: Team.WHITE,
     awayTeamId: Team.RED,
     homeGoals: [
@@ -93,6 +98,7 @@ export const MATCHES: Match[] = [
     matchDay: 3,
     date: '2024-11-04',
     time: '22:00',
+    played: true,
     homeTeamId: Team.GREEN,
     awayTeamId: Team.BLUE,
     homeGoals: [
@@ -108,6 +114,7 @@ export const MATCHES: Match[] = [
     matchDay: 4,
     date: '2024-11-11',
     time: '21:00',
+    played: true,
     homeTeamId: Team.GREEN,
     awayTeamId: Team.WHITE,
     homeGoals: [
@@ -127,6 +134,7 @@ export const MATCHES: Match[] = [
     matchDay: 4,
     date: '2024-11-11',
     time: '22:00',
+    played: true,
     homeTeamId: Team.RED,
     awayTeamId: Team.BLUE,
     homeGoals: [
@@ -144,6 +152,7 @@ export const MATCHES: Match[] = [
     matchDay: 5,
     date: '2024-11-18',
     time: '21:00',
+    played: true,
     homeTeamId: Team.BLUE,
     awayTeamId: Team.WHITE,
     homeGoals: [
@@ -164,6 +173,7 @@ export const MATCHES: Match[] = [
     matchDay: 5,
     date: '2024-11-18',
     time: '22:00',
+    played: true,
     homeTeamId: Team.RED,
     awayTeamId: Team.GREEN,
     homeGoals: [
@@ -186,6 +196,7 @@ export const MATCHES: Match[] = [
     matchDay: 6,
     date: '2024-11-25',
     time: '21:00',
+    played: false,
     homeTeamId: Team.BLUE,
     awayTeamId: Team.GREEN,
     homeGoals: [],
@@ -196,6 +207,7 @@ export const MATCHES: Match[] = [
     matchDay: 6,
     date: '2024-11-25',
     time: '22:00',
+    played: false,
     homeTeamId: Team.WHITE,
     awayTeamId: Team.RED,
     homeGoals: [],
