@@ -214,10 +214,14 @@ export const MATCHES: Match[] = [
     matchDay: 6,
     date: '2024-11-25',
     time: '22:00',
-    played: false,
+    played: true,
     homeTeamId: Team.WHITE,
     awayTeamId: Team.RED,
     homeGoals: [],
-    awayGoals: [],
+    awayGoals: [
+      { scorer: Player.DANI_NAVARRO },
+      { scorer: Player.DANI_NAVARRO },
+      { scorer: Player.PEDRO_RODRIGUEZ },
+    ],
   },
 ]
